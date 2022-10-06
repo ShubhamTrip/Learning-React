@@ -8,7 +8,10 @@ export default class Statelearn extends React.Component{
             name: 'Shubham',
             position: 'Developer',
             Clicks: 0,
-            txt: 'Sheaahh No one has Clicked yet'
+            txt: 'Sheaahh No one has Clicked yet',
+            switch: 'ON',
+            swtxt: 'Switch OFF',
+            show: true,
         }
     }
      
@@ -17,6 +20,16 @@ export default class Statelearn extends React.Component{
         Clicks: this.state.Clicks+1,
         txt: 'Hey!! Someone has Clicked'
        })
+    }
+
+    UpdateSwitch(){
+        this.state.swtxt=='Switch OFF'? this.setState({
+            swtxt:'Switch On',
+            switch: 'OFF'
+        }): this.setState({
+            swtxt:'Switch OFF',
+            switch: 'ON'
+        })
     }
 
     render(){
@@ -28,6 +41,14 @@ export default class Statelearn extends React.Component{
                 <h3>This click count is: {this.state.Clicks}</h3>
                 <h4>{this.state.txt}</h4>
                 <button onClick={()=>{this.UpdateSt()}}>Click to Update</button>
+                <hr/>
+
+                <h3>{this.state.swtxt}</h3>
+                <button onClick={()=>{this.UpdateSwitch()}}>{this.state.switch}</button>
+                <br/>
+                <button onClick={()=>{this.setState({show: !this.state.show})}}>Click Me</button>
+                {this.state.show? <h3>Visible Now Click to Hide</h3>:null}
+
             </div>
         );
     }
