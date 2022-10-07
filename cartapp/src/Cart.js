@@ -4,16 +4,19 @@ export default class Cart extends React.Component{
     constructor(){
        super();
        this.state={
-           count:0
+           item:'Phone',
+           count:0,
+           price:10000
+
        }
     }
     dec(){
-        // this.state.count > 0 ? 
+        this.state.count > 0 ? 
         this.setState({
             count: this.state.count-1
         })
-        // :
-        // null
+        :
+        this.setState({})
     }
     inc(){
         this.setState({
@@ -23,14 +26,15 @@ export default class Cart extends React.Component{
     }
 
     render(){
+        const obj = this.state;
         return (
             <div className='CartCard'>
                 <div className='leftSection' style={styles.img}>
                 </div>
                 <div className='rightSection'>
-                      <h3 style={{color:'red', fontSize:20}}>Phone</h3>
-                      <h4 style={{color:'grey'}}>Price: {}</h4>
-                      <h4 style={{color:'grey'}}>Quantity:{this.state.count}</h4>
+                      <h3 style={{color:'red', fontSize:20}}>{obj.item}</h3>
+                      <h4 style={{color:'grey'}}>Price: {obj.price}</h4>
+                      <h4 style={{color:'grey'}}>Quantity:{obj.count}</h4>
                       <div className='buttonsec'>
                           <div className='but' onClick={()=>{this.dec()}}>-</div>
                           <div className='but' onClick={()=>{this.inc()}}>+</div>
