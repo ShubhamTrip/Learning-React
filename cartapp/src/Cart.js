@@ -1,10 +1,10 @@
 import React from 'react'
 
 export default class Cart extends React.Component{
-    constructor(){
+    constructor(props){
        super();
        this.state={
-           item:'Phone',
+           item: props.itm,    // passing props
            count:0,
            price:10000
 
