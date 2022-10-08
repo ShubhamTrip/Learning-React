@@ -1,0 +1,33 @@
+.CardSection{
+    height: 400px;
+    display: flex;
+    align-items: center;
+    background-color: yellow;
+    border: solid black;
+}
+.emoCard{
+    text-align: center;
+    margin: 10px;
+    height: 300px;
+    width: 400px;
+    background-color:rgb(31, 161, 148);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 5px 10px 20px;
+}
+.emoInfo{
+    display: flex;
+    height: 80%;
+    background-color: aquamarine;
+    padding: 10px;
+    
+}
+.emoInfo img{
+    height: 200px;
+    width: 150px;
+    background-color: gray;
+    margin-right: 10px;
+}
+.emoInfo p{
+    text-align: justify;
+}
