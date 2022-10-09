@@ -1,4 +1,5 @@
 import React,{useEffect,useState} from "react";
+import PropsEffect from './PropsEffect';
 
 function Condition(){
       const [data, setData]=useState(0);
@@ -23,6 +24,7 @@ function Condition(){
             <h2>THis is count: {count}</h2>
             <button onClick={()=>{setData(data+1)}}>Update Data</button>
             <button onClick={()=>{setCount(count+1)}}>Update Count</button>
+            {/* <PropsEffect dta={data} cnt={count}/> */}
         </div>
     );
 }
