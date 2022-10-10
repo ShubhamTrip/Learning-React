@@ -1,15 +1,21 @@
 import React from "react";
 import './App.css'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 function Nav(){
     return(
-        <ul className="Nav">
-             <li><Link to='/'>Home</Link></li>
-             <li><Link to='/career'>Careers</Link></li>
-             <li><Link to='/about'>About</Link></li>
-             <li><Link to='/User/shubham'>Shubham</Link></li>
-             <li><Link to='/User/anil'>Anil</Link></li>
-             <li><Link to='/nopage'>No page</Link></li>
+        <ul className="nav">
+             <li><NavLink style={({isActive})=>{return {backgroundColor: isActive? 'green' : null }}}
+             to="/" className="navlink">Home</NavLink></li>
+             <li><NavLink style={({isActive})=>{return {backgroundColor: isActive? 'green' : null }}}
+             to='/career' className="navlink">Careers</NavLink></li>
+             <li><NavLink style={({isActive})=>{return {backgroundColor: isActive? 'green' : null }}}
+             to='/about' className="navlink">About</NavLink></li>
+             <li><NavLink style={({isActive})=>{return {backgroundColor: isActive? 'green' : null }}}
+             to='/User/shubham' className="navlink">Shubham</NavLink></li>
+             <li><NavLink style={({isActive})=>{return {backgroundColor: isActive? 'green' : null }}}
+             to='/User/anil' className="navlink">Anil</NavLink></li>
+             <li><NavLink style={({isActive})=>{return {backgroundColor: isActive? 'green' : null }}}
+             to='/nopage' className="navlink">No page</NavLink></li>
         </ul>
     );
 }
