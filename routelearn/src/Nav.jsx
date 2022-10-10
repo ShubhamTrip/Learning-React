@@ -5,6 +5,7 @@ function Nav(){
     return(
         <ul className="Nav">
              <li><Link to='/'>Home</Link></li>
+             <li><Link to='/career'>Careers</Link></li>
              <li><Link to='/about'>About</Link></li>
         </ul>
     );
