@@ -6,6 +6,7 @@ import About from './Pages/About';
 import Career from './Pages/Careers';
 import Nav from './Nav';
 import Error from './Pages/404';
+import User from './Pages/User';
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
           <Route path='/about' element={<About/>}/>
           <Route path='/career' element={<Career/>}/>
           <Route path='/*' element={<Error/>}/>
+          <Route path='/User/:name' element={<User/>}/>
         </Routes>
       </BrowserRouter>
     </div>

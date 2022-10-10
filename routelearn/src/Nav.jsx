@@ -7,6 +7,8 @@ function Nav(){
              <li><Link to='/'>Home</Link></li>
              <li><Link to='/career'>Careers</Link></li>
              <li><Link to='/about'>About</Link></li>
+             <li><Link to='/User/shubham'>Shubham</Link></li>
+             <li><Link to='/User/anil'>Anil</Link></li>
              <li><Link to='/nopage'>No page</Link></li>
         </ul>
     );
