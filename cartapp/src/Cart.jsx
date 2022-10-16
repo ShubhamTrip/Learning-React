@@ -11,16 +11,23 @@ export default class Cart extends React.Component{
        }
     }
     dec(){
-        this.state.count > 0 ? 
-        this.setState({
-            count: this.state.count-1
-        })
-        :
-        this.setState({})
+        if(this.state.count=== 0){
+            return
+        }
+          this.setState((prev)=>{
+            return{count : prev.count-1}
+          })
     }
     inc(){
-        this.setState({
-            count: this.state.count+1
+        // set State type 1    //If previous state has reveletively no dependancy so use this .. Like for changing the name we dont need to know the prev state...
+        // this.setState({
+        //     count: this.state.count+1
+        // })
+
+        // Set State type 2
+        // If current state depends on the prev state use this : eg.. here current state =  prev state +1  soo here prev state is required
+        this.setState((prevState)=>{
+            return {count: prevState.count+1}
         })
         
     }
